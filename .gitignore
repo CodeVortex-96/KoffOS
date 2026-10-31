@@ -1,0 +1,23 @@
+# Build artifacts
+build/
+dist/
+out/
+
+# Object and binary files
+*.o
+*.obj
+*.elf
+*.bin
+*.iso
+*.img
+*.efi
+
+# Debug artifacts
+*.map
+*.sym
+*.dump
+
+# Temporary files
+*.tmp
+*.log
+*~
