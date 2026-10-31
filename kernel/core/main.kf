@@ -1,0 +1,4 @@
+kof_main() {
+    while (true) {
+    }
+}
