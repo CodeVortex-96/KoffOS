@@ -53,14 +53,16 @@ serial_is_transmit_empty:
 serial_putchar:
     push rax
     push rdx
+
 .wait_loop:
     call serial_is_transmit_empty
-    cmp al, 0
-    je .wait_loop
+    test al, 0x20
+    jz .wait_loop
 
-    mov dx, PORT_COM1
     pop rdx
     pop rax
+
+    mov dx, PORT_COM1
     out dx, al
     ret
 
